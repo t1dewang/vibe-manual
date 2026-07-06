@@ -1,0 +1,96 @@
+{
+  "product_name": "Sony WH-1000XM4",
+  "model": "WH-1000XM4 Wireless Noise Canceling Headphones",
+  "category": "Headphones",
+  "brief_description": "Premium wireless over-ear headphones featuring industry-leading active noise cancellation, smart listening technology, and Bluetooth multipoint connection.",
+  "quick_start": [
+    {
+      "step_number": 1,
+      "title": "Power On & Pairing",
+      "description": "Press and hold the POWER button on the left ear cup for approx. 2 seconds. The indicator will flash blue, and it automatically enters pairing mode on first boot. Select 'WH-1000XM4' in your Bluetooth settings.",
+      "icon": "power"
+    },
+    {
+      "step_number": 2,
+      "title": "Touch Control Gestures",
+      "description": "The surface of the right ear cup is a touch panel. Double-tap to play/pause or answer calls; swipe forward/backward to skip tracks; swipe up/down to adjust volume.",
+      "icon": "play"
+    },
+    {
+      "step_number": 3,
+      "title": "Quick Attention Mode",
+      "description": "When someone speaks to you, cover the entire right ear cup with your hand. The headphones will instantly reduce music volume and let in ambient voices. Release to resume ANC.",
+      "icon": "info"
+    },
+    {
+      "step_number": 4,
+      "title": "Download App for Optimization",
+      "description": "Download the 'Sony Headphones Connect' app on your phone to set up personalized noise cancellation, adjust EQ settings, configure multipoint connections, and update firmware.",
+      "icon": "settings"
+    }
+  ],
+  "features": [
+    {
+      "title": "Active Noise Canceling & Personal NC Optimizer",
+      "description": "Industry-leading active noise canceling that analyzes personal characteristics (glasses, hair, head size) and atmospheric pressure to customize the sound performance.",
+      "operation_steps": [
+        "Put on the headphones, then press and hold the CUSTOM button on the left cup until you hear optimization tones.",
+        "Alternatively, open the Headphones Connect app and start the NC Optimizer.",
+        "Press the CUSTOM button briefly to cycle through Noise Canceling, Ambient Sound, and Off."
+      ],
+      "precautions": [
+        "Keep still during optimization and do not remove the headphones. Tones might sound loud.",
+        "Atmospheric pressure changes during flight. Re-run optimization after reaching cruising altitude."
+      ],
+      "support_info": "If noise cancellation feels weak, check that the ear pads seal properly or re-run the NC Optimizer in the app."
+    },
+    {
+      "title": "Speak-to-Chat Smart Ambient control",
+      "description": "As soon as you speak, the headphones automatically pause your music and let ambient sound in, letting you conduct a conversation without taking them off.",
+      "operation_steps": [
+        "Tap and hold the right touch sensor panel with two fingers until you hear 'Speak-to-chat activated' to enable it.",
+        "Talk to automatically pause playback. Music will resume 15 seconds after your conversation ends.",
+        "Double-tap the right touch panel to manually resume music immediately."
+      ],
+      "precautions": [
+        "Speak-to-chat may trigger when you cough, hum, or brush teeth. Reduce sensitivity to 'L (Low)' in the app if needed.",
+        "The feature only detects the wearer's voice, not voices from other speakers nearby."
+      ],
+      "support_info": "If the feature does not trigger, ensure Speak-to-Chat is toggled ON in the Sony Headphones Connect App."
+    },
+    {
+      "title": "Bluetooth Multipoint Connection",
+      "description": "Allows pairing and connecting to two Bluetooth devices simultaneously, automatically switching to the active ringing device.",
+      "operation_steps": [
+        "Enable 'Connect to 2 devices simultaneously' in the Headphones Connect app.",
+        "Pair device A, then pair device B. The headphones will manage connections automatically.",
+        "To switch playback, pause device A and play on device B."
+      ],
+      "precautions": [
+        "LDAC audio codec is disabled when multipoint connection is turned on.",
+        "Incoming calls on either connected device will automatically route to the headphones."
+      ],
+      "support_info": "If one device fails to connect, turn off Bluetooth on both devices, restart the headphones, and reconnect them sequentially."
+    }
+  ],
+  "faults": [
+    {
+      "symptom": "Headphones fail to turn on or charge indicator flashes red",
+      "cause": "Abnormal battery charging temperature or completely drained battery.",
+      "solution": "1. Charge the headphones using the supplied USB Type-C cable in a cool environment (5°C - 35°C).\n2. If the light flashes red, disconnect, let cool for 15 minutes, and try another USB port.",
+      "warning_level": "warning"
+    },
+    {
+      "symptom": "Frequent Bluetooth audio dropouts or sound stuttering",
+      "cause": "Wireless signal interference or high-bitrate LDAC connection congestion.",
+      "solution": "1. Open the app and change 'Connection Quality' from 'Priority on Sound Quality' to 'Priority on Stable Connection'.\n2. Move away from active Wi-Fi routers, microwaves, or other 2.4GHz wireless devices.",
+      "warning_level": "warning"
+    },
+    {
+      "symptom": "No sound from one side or touchpad doesn't respond",
+      "cause": "Hardware freeze or sensor error.",
+      "solution": "1. Reset the headphones: Connect to a USB charging port, then press both the POWER and CUSTOM buttons simultaneously.\n2. If resetting fails, initialize: Turn off USB, then hold POWER and CUSTOM for 7 seconds until indicator flashes blue 4 times.",
+      "warning_level": "danger"
+    }
+  ]
+}

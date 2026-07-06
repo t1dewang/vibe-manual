@@ -1,0 +1,97 @@
+{
+  "product_name": "Philips Coffee Maker",
+  "model": "Philips Series 2200 Fully Automatic Espresso Machine",
+  "category": "Coffee Maker",
+  "brief_description": "A fully automatic espresso machine featuring an intuitive touch display, classic milk frother, and durable ceramic grinders.",
+  "quick_start": [
+    {
+      "step_number": 1,
+      "title": "Fill Water & Beans",
+      "description": "Remove the water tank, fill it with cold tap water up to the MAX line, and slide it back. Open the bean hopper lid, fill it with fresh coffee beans, and close the lid.",
+      "icon": "connect"
+    },
+    {
+      "step_number": 2,
+      "title": "Power On & Preheat",
+      "description": "Plug in the power cord, and press the POWER button on the touch panel. The machine preheats and automatically runs a rinse cycle, releasing a small amount of hot water from the coffee spout.",
+      "icon": "power"
+    },
+    {
+      "step_number": 3,
+      "title": "Select & Brew",
+      "description": "Tap the Espresso or Coffee icon on the display. Adjust the strength and quantity using the touch buttons, then press the flashing Start/Stop button to begin brewing.",
+      "icon": "play"
+    },
+    {
+      "step_number": 4,
+      "title": "Empty Coffee Grounds Container",
+      "description": "When the red 'empty grounds' icon lights up, pull out the drip tray (while the machine is turned ON) and empty the coffee grounds container. Rinse and replace it.",
+      "icon": "warning"
+    }
+  ],
+  "features": [
+    {
+      "title": "Classic Milk Frother System",
+      "description": "Dispenses high-pressure steam to easily froth milk into silky, creamy foam for cappuccino and latte creations.",
+      "operation_steps": [
+        "Pour about 100 ml of cold milk (whole milk recommended) into a milk jug.",
+        "Insert the frother nozzle about 1-2 cm deep into the milk.",
+        "Tap the Steam icon, then press Start/Stop. Tilt the jug slightly and move it up and down to create rich foam.",
+        "Press Start/Stop again to stop steam flow. Wipe the nozzle immediately with a damp cloth to prevent milk scaling."
+      ],
+      "precautions": [
+        "The milk frother becomes extremely hot. Only touch the protective silicone handle to prevent steam burns.",
+        "Purge the frother nozzle for a few seconds right after frothing to clear out any milk residue inside the tubes."
+      ],
+      "support_info": "If frothing performance degrades, use a fine needle to clear the small air intake hole at the bottom of the frother tip."
+    },
+    {
+      "title": "12-Step Grinder Settings Adjustment",
+      "description": "Features a durable ceramic grinder dial inside the bean hopper, allowing 12 precise settings to adjust grind coarseness for optimal extraction flavor.",
+      "operation_steps": [
+        "Important: Only adjust the grinder setting dial while the grinder is actively grinding beans!",
+        "Press down the dial and turn it left or right. Lower numbers give a finer grind (stronger coffee); higher numbers give a coarser grind (milder flavor).",
+        "Adjust 1 notch at a time. The change will show completely after brewing 2-3 cups of coffee."
+      ],
+      "precautions": [
+        "Do not turn the grind dial while the grinder is idle, as this can damage the internal gearing mechanism.",
+        "Never put ground coffee inside the bean hopper. Use the pre-ground bypass compartment for pre-ground coffee."
+      ],
+      "support_info": "If the dial is jammed, vacuum out any coffee beans and residue from the hopper base, then adjust it only when grinding starts."
+    },
+    {
+      "title": "AquaClean Water Filter System",
+      "description": "An advanced ion-exchange filter that purifies water, prevents scaling, and eliminates the need to descale the machine for up to 5,000 cups.",
+      "operation_steps": [
+        "Shake the AquaClean filter for 5 seconds, submerge it upside down in cold water until air bubbles stop rising.",
+        "Insert the filter onto the connector inside the water tank, fill the tank, and reinsert it.",
+        "Press the AquaClean button on the touch display, then press Start/Stop to activate the filter."
+      ],
+      "precautions": [
+        "Replace the AquaClean filter when the indicator light flashes orange or when prompted by the display (approx. every 3 months).",
+        "If you do not replace the filter, you must perform a full descaling procedure using Philips decalcifier."
+      ],
+      "support_info": "If the AquaClean light is off, it means the filter is disabled. You must run a descaling cycle first before you can activate a new AquaClean filter."
+    }
+  ],
+  "faults": [
+    {
+      "symptom": "Water leaks or drips from under the machine",
+      "cause": "The drip tray is full and overflowed, or the water tank was not pushed fully into position.",
+      "solution": "1. Empty the drip tray daily or when the red 'drip tray full' indicator pops up.\n2. Ensure the water tank is pushed fully back until it clicks.",
+      "warning_level": "warning"
+    },
+    {
+      "symptom": "The AquaClean filter light flashes orange or is off",
+      "cause": "The filter is either expired or was not successfully activated in the settings.",
+      "solution": "1. Install a new AquaClean filter.\n2. Hold down the AquaClean icon for 3 seconds until the light turns blue, indicating successful activation.",
+      "warning_level": "warning"
+    },
+    {
+      "symptom": "Red alert warning lights flashing on the panel, machine locks up",
+      "cause": "Brew group is jammed or dirty, or internal safety sensors triggered.",
+      "solution": "1. Turn OFF the machine, pull out the water tank, open the service door, and remove the brew group.\n2. Rinse the brew group under warm tap water and let it air-dry. Grease the rails if necessary.\n3. Reinsert the brew group, push it until it clicks, and restart the machine.",
+      "warning_level": "danger"
+    }
+  ]
+}

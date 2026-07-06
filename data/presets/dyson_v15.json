@@ -1,0 +1,94 @@
+{
+  "product_name": "Dyson V15 Detect",
+  "model": "V15 Detect Total Clean",
+  "category": "Vacuum Cleaner",
+  "brief_description": "A powerful cordless vacuum cleaner with laser dust detection, acoustic dust analysis, and intelligent suction optimization.",
+  "quick_start": [
+    {
+      "step_number": 1,
+      "title": "Connect Wand and Cleaner Head",
+      "description": "Insert the wand into the vacuum body until it clicks, then attach the Laser Slim Fluffy or Digital Motorbar cleaner head to the other end.",
+      "icon": "connect"
+    },
+    {
+      "step_number": 2,
+      "title": "Charge the Device",
+      "description": "Place the device on the wall-mounted dock or plug the charger directly into the charging port at the rear of the handle. Fully charge before first use (approx. 4.5 hours).",
+      "icon": "battery"
+    },
+    {
+      "step_number": 3,
+      "title": "Power On & Select Mode",
+      "description": "Pull the red trigger to start vacuuming. Press the silver selection button below the LCD screen to switch between Eco, Auto/Med, and Boost modes.",
+      "icon": "power"
+    },
+    {
+      "step_number": 4,
+      "title": "Empty the Bin",
+      "description": "When dirt reaches the MAX mark, push the red bin release button and pull the handle down firmly to open the trapdoor and release dirt.",
+      "icon": "warning"
+    }
+  ],
+  "features": [
+    {
+      "title": "Laser Dust Detection (Laser Detect)",
+      "description": "A precisely-angled laser on the cleaner head makes invisible dust visible on hard floors, guiding your deep clean.",
+      "operation_steps": [
+        "Attach the Laser Slim Fluffy cleaner head to the wand.",
+        "Pull the power trigger; the green laser light will automatically illuminate the floor ahead.",
+        "Slide the green switch on the cleaner head to turn the laser light on or off."
+      ],
+      "precautions": [
+        "The laser is Class 1, but avoid staring directly into the light source for extended periods.",
+        "The laser head is designed for hard floors. Use the Digital Motorbar head for carpets."
+      ],
+      "support_info": "If the laser does not light up, check the connection or wipe the lens gently with a dry, lint-free microfiber cloth."
+    },
+    {
+      "title": "LCD Screen & Dust Statistics",
+      "description": "A piezo sensor continuously sizes and counts dust particles, showing live colored statistics on the LCD screen.",
+      "operation_steps": [
+        "Observe the four colored bar charts on the LCD screen representing tiny, medium, large, and extra-large particles.",
+        "Use Auto mode to let the device automatically adjust suction power based on dust volume."
+      ],
+      "precautions": [
+        "Avoid dropping objects on the LCD screen or exposing it to water.",
+        "Statistics reset automatically when you connect to a charger or hold the selection button."
+      ],
+      "support_info": "If the display is blank or frozen, remove and reinsert the battery pack to reboot the screen."
+    },
+    {
+      "title": "Digital Motorbar Cleaner Head",
+      "description": "High-torque brush bar that automatically adapts suction power across carpets and hard floors with anti-tangle detangling vanes.",
+      "operation_steps": [
+        "Connect the Digital Motorbar cleaner head and select Auto mode.",
+        "Adjust the red slider on the front of the head to control suction intake for deep-pile carpets."
+      ],
+      "precautions": [
+        "Long pet hairs might occasionally require manual cleanup from the brush roll.",
+        "Avoid vacuuming large glass shards or liquids to prevent motor damage."
+      ],
+      "support_info": "If the motor stops spinning due to a blockage, clear the obstruction and check the LCD screen for instructions."
+    }
+  ],
+  "faults": [
+    {
+      "symptom": "Vacuum pulsates (turns on and off rapidly) with no suction",
+      "cause": "Airflow is restricted by a blockage or dirty filter.",
+      "solution": "1. Release trigger immediately.\n2. Check wand, inlet, and cleaner head for physical blockages.\n3. Wash the filter and let it dry for 24 hours.",
+      "warning_level": "warning"
+    },
+    {
+      "symptom": "LCD Screen displays 'Wash Filter' alert",
+      "cause": "Filter pores are filled with fine dust, blocking airflow.",
+      "solution": "1. Twist the filter counter-clockwise to remove.\n2. Wash under cold running water until clean, then shake to remove excess water.\n3. Let dry for at least 24 hours in a warm, ventilated space.",
+      "warning_level": "warning"
+    },
+    {
+      "symptom": "Red light flashing on battery side, device dead",
+      "cause": "Critical battery cell hardware fault or overheating.",
+      "solution": "1. Unplug the charger and let the battery cool down for 30 minutes.\n2. If it continues flashing red, contact Dyson Customer Service for a replacement battery.",
+      "warning_level": "danger"
+    }
+  ]
+}

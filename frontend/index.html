@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeManual - Interactive User Manuals & Product Concierge</title>
+    <!-- Modern typography via Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Top Minimal Header -->
+    <header class="main-header">
+        <div class="header-logo" id="header-logo-btn" style="cursor: pointer;">
+            <span class="logo-dot"></span>
+            <h1>VibeManual</h1>
+            <span class="badge">Capstone</span>
+        </div>
+        <div class="header-actions">
+            <div id="api-status-badge" class="status-badge checking">
+                <span class="status-dot"></span>
+                <span class="status-text">Detecting...</span>
+            </div>
+            <button id="btn-config-key" class="btn btn-secondary">Configure API Key</button>
+        </div>
+    </header>
+
+    <!-- Welcome & Entry View -->
+    <main id="view-landing" class="container-landing">
+        <div class="landing-hero">
+            <h2 class="animate-up">Product Manuals, Click to Use.</h2>
+            <p class="animate-up-delay">Enter any product name or model. Our AI agents will analyze the manual instantly and generate a clean, interactive workspace canvas.</p>
+        </div>
+
+        <div class="landing-card animate-up-delay-2">
+            <form id="form-generator" class="generator-form">
+                <div class="form-group">
+                    <input type="text" id="input-product" placeholder="Enter product name and model (Optional if importing PDF)" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="input-pdf" class="file-upload-label">
+                        <span class="upload-icon">📄</span>
+                        <span class="upload-text">Import User Manual PDF (Optional)</span>
+                        <span id="pdf-file-name" class="upload-filename">Supports .pdf format</span>
+                    </label>
+                    <input type="file" id="input-pdf" accept=".pdf" style="display: none;">
+                </div>
+                <div class="manualslib-tip">
+                    <span>💡 Don't have a PDF? Search and download one from <a href="https://www.manualslib.com/" target="_blank" class="recommend-link">ManualsLib 🔗</a></span>
+                </div>
+                <div class="form-toggle-advance">
+                    <button type="button" id="btn-toggle-manual" class="btn-text">Paste Raw Manual Text (Optional)</button>
+                </div>
+                <div id="group-manual-text" class="form-group hidden">
+                    <textarea id="input-manual-text" rows="8" placeholder="Paste the manual text or paragraphs here..."></textarea>
+                </div>
+                <button type="submit" id="btn-submit-generate" class="btn btn-primary btn-block">Generate Canvas</button>
+            </form>
+
+            <div class="presets-section">
+                <h3>Free Demo Mode Presets:</h3>
+                <div class="preset-links">
+                    <button class="preset-tag" data-preset="Dyson V15">Dyson V15 Detect Vacuum</button>
+                    <button class="preset-tag" data-preset="Sony WH-1000XM4">Sony WH-1000XM4 Headphones</button>
+                    <button class="preset-tag" data-preset="Philips Coffee Maker">Philips Series 2200 Coffee Maker</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Main Workspace View (Hidden initially) -->
+    <main id="view-workspace" class="container-workspace hidden">
+        <!-- Sidebar Navigation -->
+        <aside class="workspace-sidebar">
+            <div id="product-card" class="product-info-card">
+                <div class="product-icon-wrapper">
+                    <span id="product-emoji">🔌</span>
+                </div>
+                <div class="product-titles">
+                    <h2 id="meta-product-name">Loading Product...</h2>
+                    <span id="meta-product-model">Model...</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section-title">Quick Actions</div>
+                <ul>
+                    <li>
+                        <button class="nav-item active" data-view="quickstart">
+                            <span class="nav-icon">⚡</span>
+                            <span>Quick Start Guide</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-item" data-view="chat">
+                            <span class="nav-icon">💬</span>
+                            <span>AI Assistant Chat</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-item" data-view="faults">
+                            <span class="nav-icon">⚠️</span>
+                            <span>Troubleshooting</span>
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="nav-section-title">Core Features</div>
+                <ul id="list-dynamic-features">
+                    <!-- Loaded dynamically -->
+                </ul>
+            </nav>
+
+            <!-- Sidebar Actions footer -->
+            <div class="sidebar-footer">
+                <button id="btn-export-html" class="btn btn-secondary btn-block">Export Offline Manual</button>
+                <button id="btn-back-landing" class="btn btn-secondary btn-block">Back to Home</button>
+            </div>
+        </aside>
+
+        <!-- Right Main Canvas Area -->
+        <section class="workspace-canvas">
+            <div class="canvas-grid">
+                <!-- Left Details Content (Dynamic based on selected tab) -->
+                <div class="canvas-card content-card">
+                    
+                    <!-- 1. Quick Start View -->
+                    <div id="panel-quickstart" class="workspace-panel">
+                        <div class="panel-header">
+                            <div class="panel-badge">Quick Start</div>
+                            <h2>Quick Start Guide</h2>
+                            <p>Follow these steps to configure and start using your device.</p>
+                        </div>
+                        <div class="steps-container" id="container-steps">
+                            <!-- Loaded dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- 2. AI Assistant Chat View -->
+                    <div id="panel-chat" class="workspace-panel hidden">
+                        <div class="panel-header">
+                            <div class="panel-badge">AI Assistant</div>
+                            <h2>Product Support Chatbot</h2>
+                            <p>Ask custom questions about operating, cleaning, or maintaining this device.</p>
+                        </div>
+                        <div class="chat-wrapper">
+                            <div id="chat-messages" class="chat-messages">
+                                <div class="chat-bubble model-bubble">
+                                    Hello! I am your support concierge. I have reviewed the manual for this product. How can I help you today?
+                                </div>
+                            </div>
+                            <form id="form-chat" class="chat-input-area">
+                                <input type="text" id="input-chat-message" placeholder="Type your question, e.g., How do I clean the filter?" required autocomplete="off">
+                                <button type="submit" class="btn btn-primary">Send</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- 3. Troubleshooting View -->
+                    <div id="panel-faults" class="workspace-panel hidden">
+                        <div class="panel-header">
+                            <div class="panel-badge">Troubleshooting</div>
+                            <h2>Diagnostics & Troubleshooting</h2>
+                            <p>Select a symptom below to view root causes and step-by-step solutions.</p>
+                        </div>
+                        <div class="accordion-container" id="container-faults">
+                            <!-- Loaded dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- 4. Feature Detail View (Re-used dynamically) -->
+                    <div id="panel-feature" class="workspace-panel hidden">
+                        <div class="panel-header">
+                            <div class="panel-badge" id="feature-badge">Feature</div>
+                            <h2 id="feature-title">Loading Feature...</h2>
+                            <p id="feature-description">Description...</p>
+                        </div>
+
+                        <div class="feature-detail-grid">
+                            <!-- Checklist Card -->
+                            <div class="detail-card">
+                                <h3>⚙️ Operating Steps</h3>
+                                <ul id="feature-steps" class="interactive-checklist">
+                                    <!-- Dynamic -->
+                                </ul>
+                            </div>
+
+                            <!-- Precautions Card -->
+                            <div class="detail-card alert-card">
+                                <h3>🔒 Precautions & Warnings</h3>
+                                <div id="feature-precautions" class="precautions-list">
+                                    <!-- Dynamic -->
+                                </div>
+                            </div>
+
+                            <!-- Support card -->
+                            <div class="detail-card support-card">
+                                <h3>📞 Customer Support</h3>
+                                <p id="feature-support-text">Support details...</p>
+                                <div class="contact-box">
+                                    <div class="contact-info">
+                                        <strong>Official Customer Support</strong>
+                                        <span>Support Hotline: 400-800-xxxx</span>
+                                    </div>
+                                    <button class="btn btn-secondary btn-sm" onclick="alert('Online service request submitted! Support team will contact you via text shortly.')">Book Service Appointment</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- API Key Settings Modal -->
+    <div id="modal-key-config" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>Configure Gemini API Key</h2>
+                <button id="btn-close-modal" class="btn-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>This application is powered by the <strong>Google Antigravity SDK</strong>. Entering your API Key unlocks live parsing for any product manual and active real-time AI chats.</p>
+                <div class="alert alert-info">
+                    <strong>Note:</strong> Your API Key is stored safely in a local <code>.env</code> file on the server. It is never exposed in the browser or over public networks.
+                </div>
+                <form id="form-save-key">
+                    <div class="form-group">
+                        <label for="input-key">Gemini API Key</label>
+                        <input type="password" id="input-key" placeholder="Enter AI Studio API Key (AIzaSy...)" required autocomplete="off">
+                    </div>
+                    <div class="modal-actions">
+                        <a href="https://aistudio.google.com/app/api-keys" target="_blank" class="btn-link">Get Free API Key 🔗</a>
+                        <div>
+                            <button type="button" id="btn-cancel-modal" class="btn btn-secondary">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Save and Activate</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen (Shown during generation) -->
+    <div id="loading-screen" class="loading-overlay hidden">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <h2 id="loading-title">Invoking AI Agent Team...</h2>
+            <p id="loading-status">Parsing product details and document structure...</p>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
