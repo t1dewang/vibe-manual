@@ -26,7 +26,7 @@ To provide a frictionless evaluation experience for Kaggle judges and public vis
 
 ### Live Demo Links
 - **GitHub Repository**: `https://github.com/t1dewang/vibe-manual`
-- **Live Application URL**: `[https://YOUR-APP-SUBDOMAIN.onrender.com](https://vibe-manual.onrender.com)`
+- **Live Application URL**: `https://vibe-manual.onrender.com`
 
 ---
 
@@ -79,21 +79,6 @@ To provide a frictionless evaluation experience for Kaggle judges and public vis
    ```
 
 5. Open your browser and go to `http://localhost:8000`.
-
----
-
-## 🌐 Cloud Deployment & Live Demo
-
-VibeManual is **already deployed to the cloud** via GitHub integration and is running live. 
-
-To provide a frictionless evaluation experience for Kaggle judges and public visitors:
-1. **Pre-configured Free Google Gemini API Key**: The backend service has been pre-configured with a free Google Gemini API key. You do not need to enter or obtain your own API key to test the app.
-2. **Instant Live Testing**: You can immediately type custom product names, paste manual text, or drop in any product manual PDF. The AI agents will perform real-time extraction and structured compilation immediately.
-3. **CI/CD Sync Workflow**: The application's live deployment is linked directly to our GitHub repository. Any pushes to the repository trigger automated builds and rolling updates on the cloud platform.
-
-### Live Demo Links
-- **GitHub Repository**: `https://github.com/YOUR_USERNAME/vibe-manual`
-- **Live Application URL**: `https://YOUR-APP-SUBDOMAIN.onrender.com`
 
 ---
 
