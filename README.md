@@ -25,8 +25,8 @@ To provide a frictionless evaluation experience for Kaggle judges and public vis
 3. **CI/CD Sync Workflow**: The application's live deployment is linked directly to our GitHub repository. Any pushes to the repository trigger automated builds and rolling updates on the cloud platform.
 
 ### Live Demo Links
-- **GitHub Repository**: `https://github.com/YOUR_USERNAME/vibe-manual`
-- **Live Application URL**: `https://YOUR-APP-SUBDOMAIN.onrender.com`
+- **GitHub Repository**: `https://github.com/t1dewang/vibe-manual`
+- **Live Application URL**: `[https://YOUR-APP-SUBDOMAIN.onrender.com](https://vibe-manual.onrender.com)`
 
 ---
 
